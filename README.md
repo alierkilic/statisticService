@@ -2,8 +2,9 @@
 
 To run: 
 
-1) open two terminal windows
-2) current directories should be statisticService
-3) on one of the terminal window run 'python3 server.py'
-4) on the other terminal window run 'python3 client.py'
-5) on your browser go to 127.0.0.1:5000  
+1) you should install flask, msgpack, heapq, functools and requests modules for python
+2) open two terminal windows
+3) current directories should be statisticService
+4) on one of the terminal window run 'python3 server.py'
+5) on the other terminal window run 'python3 client.py'
+6) on your browser go to 127.0.0.1:5000  
