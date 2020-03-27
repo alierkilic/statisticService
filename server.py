@@ -11,21 +11,15 @@ app = Flask(__name__)
 @app.route('/', methods=['GET', 'POST'])
 def home():
     global global_data
-    #list_after_deserialization=[]
-    if request.method == "POST":
 
-        content = request.data
-        global_data = msgpack.unpackb(content)
-        #write data to local file to save
-        #with open("file.txt", "w") as f:
-        #    json.dump(list_after_deserializationn, f)
+    if request.method == "POST":
+        # write data to global_data
+        deserialized_chunk = msgpack.unpackb(request.data)
+        global_data.extend(deserialized_chunk)
 
         return "OK"
 
     else:
-        # Read data from local file
-        #with open("file.txt") as f:
-        #   list_after_deserialization = json.load(f)
 
         list_after_deserialization = global_data
 

@@ -2,7 +2,7 @@
 
 To run: 
 
-1) you should install flask, msgpack, heapq, functools and requests modules for python
+1) install modules from requirements.txt
 2) open two terminal windows
 3) current directories should be statisticService
 4) on one of the terminal window run 'python3 server.py'
