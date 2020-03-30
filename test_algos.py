@@ -10,11 +10,10 @@ class Event:
         self.first_data = first_data
         self.second_data = second_data
 
-
-
 class TestUser(unittest.TestCase):
 
     global data_list
+
     def test_daily_user(self):
         # test empty list
         data_list.clear()
@@ -85,7 +84,7 @@ class TestUser(unittest.TestCase):
                                second_data='1241687973565112848'))
         data_list.append(Event(time=int(1439003289214921956), event_name='viorama', first_data='5577006791947779410',
                                second_data='2547829344760061335'))
-        self.assertEqual(server.get_weeks_top_N(data_list, 1), [[]])
+        self.assertEqual(server.get_weeks_top_N(data_list, 10), [[]])
 
         data_list.clear()
         # Çarşamba, 29 Temmuz 2015 19:50:59 GMT+03:00 DST
